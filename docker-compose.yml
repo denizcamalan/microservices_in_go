@@ -1,0 +1,26 @@
+# # Docker Compose file Reference (https://docs.docker.com/compose/compose-file/)
+
+version: '3'
+
+services:
+  service_a:
+    image: git.konzek.com:5050/denizcamalan/test:latest
+    ports:
+      - "9000:9000"
+    networks:
+      - microcervices
+
+  services_b:
+    image: git.konzek.com:5050/denizcamalan/test2:latest
+    networks:
+      - microcervices
+
+  eclipse-mosquitto:
+    image: eclipse-mosquitto
+    ports:
+    -  "1883:1883"
+    networks:
+      - microcervices
+
+networks:
+  microcervices:    
