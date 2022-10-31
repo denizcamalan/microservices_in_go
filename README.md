@@ -1,12 +1,12 @@
 # microservices_in_go
 
-
+```
 service A app (publisher)  --->  send message      ----
                                                       | 
                                                       | (mqtt)
                                                       | 
 service B app (subscriber) --->  resieved message  <---
-
+```
 
 # Getting Started
 
